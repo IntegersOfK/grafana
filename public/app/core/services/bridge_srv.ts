@@ -31,6 +31,7 @@ export class BridgeSrv {
   }
 
   init() {
+    this.$window.store = store;
     this.$rootScope.$on('$routeUpdate', (evt, data) => {
       const state = store.getState();
 
